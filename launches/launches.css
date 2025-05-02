@@ -1,0 +1,247 @@
+
+:root {
+    --font-base: 1rem;
+    --font-lg: clamp(1.5rem, 4vw, 2.5rem);
+    --font-xl: clamp(2rem, 5vw, 3rem);
+    --font-btn: clamp(1.2rem, 2.5vw, 2rem);
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --radius-sm: 0.5rem;
+    --radius-md: 1rem;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Jost';
+    background-color: #12141c;
+    color: white;
+    font-size: var(--font-base);
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  img {
+    max-width: 100%;
+    border-radius: var(--radius-sm);
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 1rem 2.5rem;
+    border-radius: 3rem;
+    position: fixed;
+    top: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    z-index: 999;
+    font-size: var(--font-base);
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+  }
+  
+  .astro { font-weight: 400; }
+  .disha { font-weight: 300; }
+  
+  .navbar h1, .logo {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    min-width: 0;
+    flex-shrink: 1;
+  }
+  
+  .navbar a {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .navbar a:hover { color: #ccc; }
+  
+  section {
+    padding: 4rem 2.5rem;
+  }
+  
+  section h2 {
+    font-weight: 400;
+    text-align: center;
+    font-size: var(--font-xl);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  #launches-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+  }
+  
+  .launch-card{
+    background-color: #1f2232;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    padding-bottom: 0.5rem;
+  }
+  
+  .launch-card ,
+  .rocket-card {
+    max-width: 18rem;
+  }
+  
+  .launch-card .content,
+  .rocket-card .name {
+    padding: 1rem;
+  }
+  
+  .launch-card .badge {
+    background-color: #1a75ff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+  }
+  
+  .launch-card .title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .launch-card .datetime {
+    font-size: 0.85rem;
+    color: #ccc;
+  }
+  
+  .launch-card .actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 1rem 0;
+  }
+  
+  .launch-card .actions a {
+    color: #b388ff;
+    font-size: 0.9rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: #bbb;
+    border-top: 1px solid #333;
+    background-color: #12141c;
+  }
+  
+  footer a {
+    color: #bbb;
+    margin: 0 0.5rem;
+  }
+  
+  .hamburger {
+    display: none;
+  }
+
+  .button{
+    justify-content: space-between;
+    display: flex;
+    padding: 2rem;
+    font-family: 'Jost';
+  }
+
+  .next button {
+    background-color: #6a00ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight:normal;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  .prev button{
+    background-color: #6a00ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight:normal;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+ .button button:hover {
+    background-color: #5000c8; /* darker on hover */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hamburger {
+      display: block;
+      font-size: 1.6rem;
+      color: white;
+      cursor: pointer;
+      z-index: 100;
+    }
+    .navbar {
+      width: 90%;
+      padding: 1rem;
+    }
+    .menu {
+      display: none;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.85);
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      padding: 0.5rem;
+      border-radius: var(--radius-sm);
+      z-index: 99;
+    }
+    .menu.show { display: flex; }
+    .navbar .menu a {
+      display: block;
+      font-size: 0.875rem;
+      padding: 0.5rem;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .launches-container{
+      flex-direction: column;
+      align-items: center;
+    }
+    .launch-card{
+      width: 90%;
+    }
+
+    footer {
+      font-size: 0.8rem;
+      padding: 1.25rem;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .navbar {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.9rem;
+    }
+    .navbar h1 {
+      font-size: 1rem;
+    }
+    .menu-icon {
+      font-size: 1rem;
+    }
+  }
+  

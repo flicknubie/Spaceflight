@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Astro Disha</title>
+  <link rel="stylesheet" href="launches.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <a href="/index.html"><span class="astro">ASTRO</span> <span class="disha">DISHA</span></a>  
+    </div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div class="menu" id="navMenu">
+    <a href="/index.html">HOME</a>
+    <a href="/launches/launches.html">LAUNCHES</a>
+    <a href="/rockets/rockets.html">ROCKETS</a>
+    <a href="/Locations/location.html">LOCATIONS</a>
+    </div>
+  </div>
+
+
+  <!-- Launches Section -->
+  <section id="launches">
+    <h2>LAUNCHES</h2>
+    <hr style="width: 70%;">
+    <br>
+    <br>
+    <div id="launches-container"></div>
+    <div class="button">
+      <div id="Prev"></div>
+      <div id="Next"></div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    ©AstroDisha &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+    <a href="#">Privacy Policy</a> &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+    All rights reserved.
+  </footer>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("navMenu");
+      menu.classList.toggle("show");
+    }
+  </script>
+  <script src="/launches/company_URL.js"></script>
+  <script src="/launches/launches.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Astro Disha</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <a href="/"><span class="astro">ASTRO</span> <span class="disha">DISHA</span></a>  
+      </div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div class="menu" id="navMenu">
+    <a href="/index.html">HOME</a>
+    <a href="#launches">LAUNCHES</a>
+    <a href="#rockets">ROCKETS</a>
+    <a href="/Locations/location.html">LOCATIONS</a>
+    </div>
+  </div>
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="intro"><h1>Every Launch.<br>Every Orbit.<br>Live.</h1></div>
+    <div class="track-button"><a href="/launches/launches.html">Track Now →</a></div>
+  </div>
+
+
+  <!-- Launches Section -->
+  <section id="launches">
+    <h2>LAUNCHES</h2>
+    <br>
+    <br>
+    <div id="launches-container" >
+   
+    </div>
+    <div class="more-button-container">
+      <a href="/launches/launches.html" class="more-button">All Launches →</a>
+    </div>
+  </section>
+
+<hr style="width: 70%;">
+  <!-- Rockets Section -->
+  <section  id="rockets">
+    <h2>ROCKETS</h2>
+    <br>
+    <br>
+    <div id="rockets-container"></div>
+    <div class="more-button-container">
+      <a href="/rockets/rockets.html" class="more-button">All Rockets →</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    ©AstroDisha &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+    <a href="#">Privacy Policy</a> &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+    All rights reserved.
+  </footer>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("navMenu");
+      menu.classList.toggle("show");
+    }
+  </script>
+  <script src="/launches/company_URL.js"></script>
+  <script type="module" src="/launches.js"></script>
+  <script type="module" src="/rocket.js"></script>
+  
+</body>
+</html>
